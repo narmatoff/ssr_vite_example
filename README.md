@@ -19,5 +19,5 @@
 - обрабатываем маршруты. (dev: отдаем актуальный index.html, prod: отдаем из `dist/client/` `landingHtml`)
 
 Через `entry-client.js` подключенному в `index.html` подключаем `main.js`, в котором создаем инстанс приложения `#app`
-В app инициализируем `createSSRApp(App)` где это компонент `vue`.
+В app инициализируем `createSSRApp(App)` где `App` это компонент `vue`.
 
