@@ -12,11 +12,14 @@
 ## Кратное описание
 
 Скрипт запускает `server.js`:
-- в проде загружается `index.html` из `./dist/client/`.
-- В деве шаблон берем на лету
+- prod/dev:
+  - в проде загружается `index.html` из `./dist/client/`.
+  - В деве шаблон берем на лету
 - Инициализируем сервер `express`
 - не продакшен: создаем сервер как `middlaware`
-- обрабатываем маршруты. (dev: отдаем актуальный index.html, prod: отдаем из `dist/client/` `landingHtml`)
+- обрабатываем маршруты:
+  - dev: отдаем актуальный index.html
+  - prod: отдаем из `dist/client/` (`landingHtml`)
 
 Через `entry-client.js` подключенному в `index.html` подключаем `main.js`, в котором создаем инстанс приложения `#app`
 В app инициализируем `createSSRApp(App)` где `App` это компонент `vue`.
