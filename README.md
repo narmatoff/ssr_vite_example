@@ -11,7 +11,8 @@
 
 ## Кратное описание
 
-Скрипт запускает `server.js`:
+Скрипт запускает `server.ts`:
+- определяем окружение: `const isProduction: boolean = false/true`
 - prod/dev:
   - prod: загружается `index.html` из `./dist/client/`.
   - dev: шаблон берем на лету
@@ -21,6 +22,6 @@
   - prod: отдаем из `dist/client/` (`landingHtml`)
   - dev: отдаем актуальный index.html
 
-Через `entry-client.js` подключенному в `index.html` подключаем `main.js`, в котором создаем инстанс приложения `#app`
+Через `entry-client.ts` подключенному в `index.html` подключаем `main.ts`, в котором создаем инстанс приложения `#app`
 В app инициализируем `createSSRApp(App)` где `App` это компонент `vue`.
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import SsrExampleComponent from './components/SsrExampleComponent.vue'
 </script>
 
