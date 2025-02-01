@@ -1,23 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-defineProps({
-  textExampleParam: String,
-})
+defineOptions({
+  name: "SsrExampleComponent",
+});
 
-const modelValue = ref('')
+const { textExampleParam = "Заголовок по умолчанию" } = defineProps<{
+  textExampleParam?: string;
+}>();
 
+const modelValue = ref("");
 </script>
 
-<template>
-  <img src="/vite.svg" alt="">
-<div class="inputArea">
-  <input v-model="modelValue" type="text" placeholder="Заголовок...">
-  <pre>{{ modelValue }}</pre>
+<template lang="pug">
+div.inputArea
+    input(v-model="modelValue", type="text", placeholder="Заголовок...")
+    pre {{ modelValue }}
 
-</div>
-  <h1>{{ textExampleParam }}</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eaque expedita itaque optio placeat totam vitae! Error maiores molestiae nemo!</p>
+h1 {{ textExampleParam }}
+p Lorem ipsum dolor sit amet
 </template>
 
 <style scoped>

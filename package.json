@@ -1,7 +1,7 @@
 {
   "name": "vite-vue-starter",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "start": "node server.ts",
@@ -12,6 +12,9 @@
   "dependencies": {
     "compression": "^1.7.5",
     "express": "^5.0.1",
+    "prettier": "^3.4.2",
+    "pug": "^3.0.3",
+    "sass": "^1.83.4",
     "sirv": "^3.0.0",
     "vue": "^3.5.13"
   },
