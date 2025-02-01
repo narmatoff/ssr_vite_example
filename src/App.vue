@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { defineAsyncComponent, hydrateOnVisible } from "vue";
 // import SsrExampleComponent from "./components/SsrExampleComponent.vue";
 

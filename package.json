@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "bun server.ts",
-    "build": "bun run build:client && bun run build:server",
+    "start": "bun run --bun server.ts",
+    "build": "bun run --bun build:client && bun run --bun build:server",
     "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server"
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "clean": "rm -rf dist && echo 'Clean done.'"
   },
   "dependencies": {
     "compression": "^1.7.5",
@@ -19,11 +20,12 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "bun-types": "^1.2.1",
+    "@types/bun": "^1.2.1",
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.0",
     "@types/node": "^22.12.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "bun-types": "^1.2.1",
     "cross-env": "^7.0.3",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",

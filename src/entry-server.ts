@@ -8,6 +8,7 @@ interface SSRContext {
 interface RenderResult {
   html: string;
 }
+
 export async function render(_url: string): Promise<RenderResult> {
   const { app } = createApp();
 

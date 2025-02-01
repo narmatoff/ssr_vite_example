@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
-import express from "express";
+import express, { Express } from "express";
 import compression from "compression";
+import { ViteDevServer } from "vite";
 
 (async () => {
   // окружение
@@ -14,9 +15,9 @@ import compression from "compression";
     landingHtml = await fs.readFile("./dist/client/index.html", "utf-8");
   }
 
-  const app = express();
+  const app: Express = express();
 
-  let vite;
+  let vite: ViteDevServer;
 
   if (!isProduction) {
     const { createServer } = await import("vite");
