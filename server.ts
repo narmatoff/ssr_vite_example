@@ -4,7 +4,7 @@ import compression from "compression";
 
 (async () => {
   // окружение
-  const isProduction: boolean = false; // определяем окружение
+  const isProduction: boolean = true; // определяем окружение
   const port: number = 3000;
   const base: string = "/";
 

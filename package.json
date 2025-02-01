@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "node server.ts",
-    "build": "npm run build:client && npm run build:server",
+    "start": "bun server.ts",
+    "build": "bun run build:client && bun run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server"
   },
@@ -19,6 +19,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "bun-types": "^1.2.1",
     "@types/compression": "^1.7.5",
     "@types/express": "^5.0.0",
     "@types/node": "^22.12.0",

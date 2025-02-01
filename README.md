@@ -3,9 +3,8 @@
 Описание скриптов:
 ```json
 {
-    "dev": "node server", // запустить в дев режиме (шаблон отдается на лету)
-    "build": "npm run build:client && npm run build:server", // собрать клиента и сервер в dist
-    "preview": "cross-env NODE_ENV=production node server" // прод
+    "dev": "bun server", // запустить в дев режиме (шаблон отдается на лету)
+    "build": "bun run build:client && bun run build:server", // собрать клиента и сервер в dist
 }
 ```
 
@@ -24,4 +23,3 @@
 
 Через `entry-client.ts` подключенному в `index.html` подключаем `main.ts`, в котором создаем инстанс приложения `#app`
 В app инициализируем `createSSRApp(App)` где `App` это компонент `vue`.
-
