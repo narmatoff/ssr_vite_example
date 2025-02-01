@@ -1,5 +1,7 @@
 # SSR Vite Vue3
 
+Сервер `bun@1.2`
+
 Описание скриптов:
 ```json
 {
@@ -10,7 +12,7 @@
 
 ## Кратное описание
 
-Скрипт запускает `server.ts`:
+### Скрипт запускает `server.ts`:
 - определяем окружение: `const isProduction: boolean = false/true`
 - prod/dev:
   - prod: загружается `index.html` из `./dist/client/`.
